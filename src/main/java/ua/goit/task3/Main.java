@@ -14,6 +14,7 @@ public class Main {
         return Arrays.stream(array)
                 .map(n -> n.split(", "))
                 .flatMap(Arrays::stream)
+                .sorted()
                 .collect(Collectors.joining(", ", "\"", "\""));
     }
 }
